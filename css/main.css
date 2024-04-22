@@ -1,0 +1,115 @@
+body {
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+#info {
+    padding: 10px;
+}
+
+.row-text {
+    background-color: rgb(0, 0, 0);
+    padding: 20px; /* increased padding for better visibility */
+    margin: 0;
+    font-size: 24px; /* set the font size to large */
+    font-family: monospace
+}
+
+.row {
+/* border  top and bottom */
+    border-top: 4px solid #888;
+
+}
+
+#bottom {
+    background-color: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+
+#scrolling-text-container {
+    width: 90%;
+    background-color: #222;
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+#scrolling-text {
+    white-space: nowrap;
+    animation: scrolling-text 40s linear infinite;
+}
+
+@keyframes scrolling-text {
+    0% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#time-container {
+    width: 10%;
+    text-align: right;
+    padding-right: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#time {
+    font-size: 44px;
+    margin: 0;
+}
+
+.flash {
+    animation: flash 4s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
